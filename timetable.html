@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Tracker</title>
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Timetable Reminder</h1>
+        
+        <div class="task-form">
+           
+            <input type="text" id="subjectName" placeholder="Subject Name">
+            <input type="time" id="StartTime" placeholder="Start Time">
+            
+            <label for="days">Select a day:</label>
+            <select id="days" name="days">
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+            </select>
+
+            <button id="doneButton">Done</button>
+        </div>
+
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Time</th>
+                    <th>Repeat Day</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

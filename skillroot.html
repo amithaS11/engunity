@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBuilder Routers</title>
+    <style>
+        
+body {
+   
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('skillroot.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: #0d055bd5; 
+    font-weight: 600;
+    font-family: 'Papyrus',cursive;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #3a0606da; 
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #d4dae6;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); 
+}
+#language-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#languages {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#languages:hover {
+    background: #f1f1f1;
+    border-color: #4e8999; 
+}
+#language-info {
+    text-align: center;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#language-info h2 {
+    color: #402b94;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#language-info p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+#resources {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#resources li {
+    margin: 10px 0;
+}
+
+#resources a {
+    text-decoration: none;
+    color: #4a69f5;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#resources a:hover {
+    text-decoration: underline;
+    color: #388e3c; /* Darker green on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    #languages {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> SkillBuilder Router 🚀💻</h1>
+        <p>From Beginner to Pro: Unlock the Secrets of Coding!</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <select id="languages">
+                <option value="">--Choose a skill--</option>
+                <option value="c">C</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="embeddedC">Embedded C</option>  
+            </select>
+             
+            </section>
+
+            <section id="language-info">
+                <h2 id="language-title">Welcome!</h2>
+                <p id="language-description">Select a language to see its details and resources.</p>
+                <ul id="resources"></ul>
+            </section>
+        </div>
+    </main>
+
+    
+
+    <script>
+        document.getElementById('languages').addEventListener('change', function () {
+    const language = this.value;
+
+    const languageDetails = {
+        c: {
+            title: 'C Programming',
+            description: 'C is a foundational programming language that has shaped the development of modern software. It is widely used for system programming, embedded systems, and developing operating systems. C provides low-level access to memory and system resources, making it ideal for writing efficient and performance-critical applications.',
+            resources: [
+                { text: 'Learn C on YouTube', link: 'https://www.youtube.com/results?search_query=learn+c+programming' },
+                { text: 'C for Beginners - Free Course', link: 'https://www.learn-c.org/' },
+                { text: 'C Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/c-coding-interview-questions/' }
+
+            ]
+        },
+        java: {
+            title: 'Java Programming',
+            description: 'Java is one of the most popular and versatile programming languages in the world, known for its "write once, run anywhere" philosophy. It is widely used for building enterprise-level applications, Android apps, and large-scale systems. Java has a strong object-oriented structure and is used in both backend and frontend development.',
+            resources: [
+                { text: 'Java Tutorials on YouTube', link: 'https://www.youtube.com/results?search_query=learn+java+programming' },
+                { text: 'Java for Beginners - Free Course', link: 'https://www.codecademy.com/learn/learn-java' },
+                { text: 'Java Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/java-interview-questions/' }
+
+            ]
+        },
+        python: {
+            title: 'Python Programming',
+            description: 'Python is a high-level, interpreted language that prioritizes simplicity and readability, making it an excellent choice for beginners. It is widely used for web development, data science, artificial intelligence, and automation. Python’s vast ecosystem of libraries and frameworks, like Django and TensorFlow, makes it highly versatile for various applications.',
+            resources: [
+                { text: 'Python Courses on YouTube', link: 'https://www.youtube.com/results?search_query=learn+python' },
+                { text: 'Python Docs', link: 'https://docs.python.org/3/' },
+                { text: 'Python Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/' }
+            
+            ]
+        },
+        html: {
+            title: 'HTML (HyperText Markup Language)',
+            description: 'HTML is the standard markup language used to create web pages. It defines the structure of web content, organizing elements like headings, paragraphs, images, and links. HTML is essential for web development as it works alongside CSS for design and JavaScript for interactivity to create fully functional web applications.',
+            resources: [
+                { text: 'HTML Tutorials', link: 'https://www.youtube.com/results?search_query=learn+html' },
+                { text: 'HTML Reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+                { text: 'HTML for Beginners', link: 'https://www.codecademy.com/learn/learn-html' },
+                { text: 'HTML Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/html-exercises/' }
+            ]
+        },
+        css: {
+            title: 'CSS (Cascading Style Sheets)',
+            description: 'CSS is a styling language used to define the visual presentation of web pages. It controls layout, colors, fonts, and responsiveness, allowing developers to create attractive, mobile-friendly websites. CSS enables dynamic design adjustments across different screen sizes and devices, making it crucial for modern web design.',
+            resources: [
+                { text: 'CSS Learning on YouTube', link: 'https://www.youtube.com/results?search_query=learn+css' },
+                { text: 'CSS for Beginners', link: 'https://www.freecodecamp.org/news/css-tutorials/' },
+                { text: 'CSS Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/css-interview-questions-and-answers/' }
+
+            ]
+        },
+        javascript: {
+            title: 'JavaScript Programming',
+            description: 'JavaScript is a versatile, high-level language that powers the dynamic elements of websites. It is essential for client-side interactivity such as animations, form validations, and real-time updates. JavaScript is also widely used for server-side programming through Node.js, enabling full-stack development.',
+            resources: [
+                { text: 'JavaScript on YouTube', link: 'https://www.youtube.com/results?search_query=learn+javascript' },
+                { text: 'JavaScript for Beginners', link: 'https://www.codecademy.com/learn/introduction-to-javascript' },
+                { text: 'Javascript  Problem solving questions and answers', link: 'https://www.keka.com/javascript-coding-interview-questions-and-answers' }
+            ]
+        },
+        embeddedC: {
+            title: 'Embedded C',
+            description: 'Embedded C is a specialized version of the C programming language designed for developing software for embedded systems and microcontrollers. It is used in devices like sensors, cameras, and robotics. Embedded C allows low-level memory manipulation, real-time processing, and hardware interaction, making it perfect for resource-constrained devices.',
+            resources: [
+                { text: 'Embedded C Tutorials', link: 'https://www.youtube.com/results?search_query=embedded+c+tutorial' },
+                { text: 'Learn Embedded Systems', link: 'https://www.udemy.com/course/embedded-systems/ ' },
+                { text: 'Embedded C Problem solving questions and answers', link: 'https://www.geeksforgeeks.org/embedded-c-interview-questions/' }
+            ]
+        }
+    }
+
+    const infoSection = document.getElementById('language-info');
+    const titleElement = document.getElementById('language-title');
+    const descriptionElement = document.getElementById('language-description');
+    const resourcesElement = document.getElementById('resources');
+
+    if (languageDetails[language]) {
+        titleElement.textContent = languageDetails[language].title;
+        descriptionElement.textContent = languageDetails[language].description;
+
+        resourcesElement.innerHTML = '';
+        languageDetails[language].resources.forEach(resource => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.textContent = resource.text;
+            link.href = resource.link;
+            link.target = '_blank';
+            listItem.appendChild(link);
+            resourcesElement.appendChild(listItem);
+        });
+
+        infoSection.style.display = 'block';
+    } else {
+        infoSection.style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>

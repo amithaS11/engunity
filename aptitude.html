@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Test</title>
+  <link rel="stylesheet" href="aptitude.css">
+</head>
+<body>
+  <header class="head">
+    <p><b>Aptitude Test</b></p>
+  </header>
+
+  <main>
+    <section id="section-selection">
+      <h2 class="sec">Select a Section</h2>
+      <button onclick="startSection('logical')">Logical Reasoning</button>
+      <button onclick="startSection('verbal')">Verbal Ability</button>
+      <button onclick="startSection('quantitative')">Quantitative Aptitude</button>
+    </section>
+
+    <section id="test-container" class="hidden">
+      <div id="question-container"></div>
+      <button id="next-button" class="hidden" onclick="nextQuestion()">Next Question</button>
+    </section>
+
+    <section id="result" class="hidden">
+      <h2>Test Results</h2>
+      <p id="score-display"></p>
+      <button onclick="restartTest()">Restart Test</button>
+    </section>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+      
+  </main>
+
+  <script src="aptitude.js"></script>
+</body>
+</html>
