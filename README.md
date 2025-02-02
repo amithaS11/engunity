@@ -1,4 +1,4 @@
-![TEAMTRIADS](https://github.com/user-attachments/assets/c8a57504-6aea-4150-8284-51aa295e2bed)![Screenshot 2025-01-26 043534](https://github.com/user-attachments/assets/5a1da75d-9964-457a-9cce-bc2c3fdd0b0e)![image](https://github.com/user-attachments/assets/14fb988a-f5a6-4611-b1d2-a37f46899b02)![image](https://github.com/user-attachments/assets/233fa79d-1436-4b4e-ad89-b9cb015800e1) tink-her-hack-3-temp
+![TEAMTRIADS](https://github.com/user-attachments/assets/c8a57504-6aea-4150-8284-51aa295e2bed)![Screenshot 2025-01-26 043534]![image](https://github.com/user-attachments/assets/233fa79d-1436-4b4e-ad89-b9cb015800e1) tink-her-hack-3-temp
 # ENGUNITY🎯
 ##Enginuity is a web app for engineering students, offering timetable reminders, a skill-building router, aptitude questions, stress relief activities, and daily challenge tracking to boost focus and growth.
 ### Team Name: TRIADS
