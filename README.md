@@ -51,12 +51,17 @@ For Software:
 # Video
 
 
+
+https://github.com/user-attachments/assets/cbeae361-3fb1-4e32-80b8-b100451f4498
+
+
+
+https://github.com/user-attachments/assets/266bbd51-5386-4dc7-ac24-7e37213096d5
+
+
 https://github.com/user-attachments/assets/2d8b489d-c9e9-4967-a527-ca5c0370565f
 
 
-[Add your demo video link here]
-*Explain what the video demonstrates*
-# Additional Demos
 [Add any extra demo materials/links]
 ## Team Contributions
 - AMITHA S: FRONTEND
